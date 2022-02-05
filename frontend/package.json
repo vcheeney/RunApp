@@ -1,0 +1,53 @@
+{
+  "name": "runappweb",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NEXT_PUBLIC_USE_EMULATORS=true next dev",
+    "dev:no-emulators": "next dev",
+    "build": "cross-env NEXT_PUBLIC_USE_EMULATORS=true next build",
+    "build:prod": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "emulators": "kill-port 9099 && kill-port 5001 && kill-port 8080 && kill-port 9199 && kill-port 4000 && firebase emulators:start --import=emulators",
+    "emulators:export": "firebase emulators:export emulators",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.6.12",
+    "@headlessui/react": "^1.4.1",
+    "@heroicons/react": "^1.0.4",
+    "axios": "^0.23.0",
+    "firebase": "^9.0.2",
+    "firebase-tools": "^9.23.0",
+    "formik": "^2.2.9",
+    "jest": "^27.2.5",
+    "lodash": "^4.17.21",
+    "next": "^12.0.1",
+    "next-seo": "^4.28.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-dropzone": "^11.4.2",
+    "react-hot-toast": "^2.1.1",
+    "react-icons": "^4.3.1",
+    "react-query": "^3.26.0",
+    "react-share": "^4.4.0",
+    "uuid": "^8.3.2",
+    "validator": "^13.7.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@types/react": "17.0.24",
+    "@types/uuid": "^8.3.1",
+    "@types/validator": "^13.6.6",
+    "autoprefixer": "^10.3.5",
+    "cross-env": "^7.0.3",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "kill-port": "^1.6.1",
+    "postcss": "^8.3.7",
+    "tailwindcss": "^2.2.15",
+    "typescript": "4.4.3"
+  }
+}

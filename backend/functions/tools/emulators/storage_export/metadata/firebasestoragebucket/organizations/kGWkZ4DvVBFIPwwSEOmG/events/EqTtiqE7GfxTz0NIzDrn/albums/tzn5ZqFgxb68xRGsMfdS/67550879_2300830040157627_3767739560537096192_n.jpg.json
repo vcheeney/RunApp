@@ -1,0 +1,19 @@
+{
+  "name": "organizations/kGWkZ4DvVBFIPwwSEOmG/events/EqTtiqE7GfxTz0NIzDrn/albums/tzn5ZqFgxb68xRGsMfdS/67550879_2300830040157627_3767739560537096192_n.jpg",
+  "bucket": "firebasestoragebucket",
+  "contentType": "image/jpeg",
+  "metageneration": 1,
+  "generation": 1644011878422,
+  "storageClass": "STANDARD",
+  "etag": "someETag",
+  "contentDisposition": "inline",
+  "contentEncoding": "identity",
+  "downloadTokens": [
+    "5163b455-f8d4-4bca-b005-d327042c77b7"
+  ],
+  "timeCreated": "2022-02-04T21:57:58.421Z",
+  "updated": "2022-02-04T21:57:58.423Z",
+  "size": 379966,
+  "md5Hash": "rtctu+1314KCWFfE7wuQzQ==",
+  "crc32c": "1913182573"
+}

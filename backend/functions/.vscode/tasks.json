@@ -1,0 +1,47 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "serve",
+			"problemMatcher": [],
+			"label": "npm: serve",
+			"detail": "npm run build && firebase emulators:start --only functions"
+		},
+		{
+			"type": "npm",
+			"script": "build:watch",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build:watch",
+			"detail": "nodemon --watch src --ignore src/routes.ts --ext ts --exec \"npm run build\"",
+			"presentation": {
+				"group": "groupA"
+			}
+		},
+		{
+			"type": "npm",
+			"script": "emulators",
+			"problemMatcher": [],
+			"label": "npm: emulators",
+			"detail": "kill-port 9099 && kill-port 5001 && kill-port 8080 && kill-port 9199 && kill-port 4000 && firebase emulators:start --import=emulators",
+			"presentation": {
+				"group": "groupA"
+			}
+		},
+		{
+			"type": "npm",
+			"script": "emulators:inspect",
+			"problemMatcher": [],
+			"label": "npm: emulators:inspect",
+			"detail": "kill-port 9099 && kill-port 5001 && kill-port 8080 && kill-port 9199 && kill-port 4000 && firebase emulators:start"
+		},
+		{
+			"type": "npm",
+			"script": "update-api-client",
+			"problemMatcher": [],
+			"label": "npm: update-api-client",
+			"detail": "sh tools/scripts/update-api-client.sh"
+		}
+	]
+}

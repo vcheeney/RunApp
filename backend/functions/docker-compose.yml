@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  openapi_generator:
+    build:
+      context: ./tools/openapi-generator
+      dockerfile: Dockerfile
+    volumes:
+      - ./tools/openapi-generator/.build:/local/out

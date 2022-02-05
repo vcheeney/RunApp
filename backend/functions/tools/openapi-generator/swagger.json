@@ -1,0 +1,1216 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"Album": {
+				"properties": {
+					"uri": {
+						"type": "string",
+						"description": "Le URI de l'album",
+						"example": "21km",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"name": {
+						"type": "string",
+						"description": "Le nom de l'album",
+						"example": "21 km",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"photoCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"eventId": {
+						"type": "string"
+					},
+					"organizationId": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"uri",
+					"name",
+					"photoCount",
+					"updatedDate",
+					"createdDate",
+					"eventId",
+					"organizationId",
+					"id"
+				],
+				"type": "object"
+			},
+			"Pick_Album.name-or-uri_": {
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Le nom de l'album",
+						"example": "21 km",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"uri": {
+						"type": "string",
+						"description": "Le URI de l'album",
+						"example": "21km",
+						"minLength": 3,
+						"maxLength": 50
+					}
+				},
+				"required": [
+					"name",
+					"uri"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"CreateAlbumDto": {
+				"$ref": "#/components/schemas/Pick_Album.name-or-uri_"
+			},
+			"UpdateAlbumDto": {
+				"$ref": "#/components/schemas/CreateAlbumDto"
+			},
+			"RacingEvent": {
+				"properties": {
+					"image": {
+						"type": "string",
+						"example": "https://firebasestorage.googleapis.com/b/bucket/o/20210912.jpg"
+					},
+					"eventDate": {
+						"type": "string",
+						"format": "date",
+						"description": "La date de l'événement"
+					},
+					"uri": {
+						"type": "string",
+						"description": "L'URI de l'événement",
+						"example": "bonjour-automne-2021",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"name": {
+						"type": "string",
+						"description": "Le nom de l'événement",
+						"example": "Bonjour Automne 2021",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"photoCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"organisationId": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"image",
+					"eventDate",
+					"uri",
+					"name",
+					"photoCount",
+					"updatedDate",
+					"createdDate",
+					"organisationId",
+					"id"
+				],
+				"type": "object"
+			},
+			"Pick_RacingEvent.eventDate-or-name-or-image-or-uri_": {
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Le nom de l'événement",
+						"example": "Bonjour Automne 2021",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"uri": {
+						"type": "string",
+						"description": "L'URI de l'événement",
+						"example": "bonjour-automne-2021",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"eventDate": {
+						"type": "string",
+						"format": "date",
+						"description": "La date de l'événement"
+					},
+					"image": {
+						"type": "string",
+						"example": "https://firebasestorage.googleapis.com/b/bucket/o/20210912.jpg"
+					}
+				},
+				"required": [
+					"name",
+					"uri",
+					"eventDate",
+					"image"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"CreateEventDto": {
+				"$ref": "#/components/schemas/Pick_RacingEvent.eventDate-or-name-or-image-or-uri_"
+			},
+			"UpdateEventDto": {
+				"properties": {
+					"image": {
+						"type": "string"
+					},
+					"eventDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"uri": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"image",
+					"eventDate",
+					"uri",
+					"name",
+					"id"
+				],
+				"type": "object"
+			},
+			"Organization": {
+				"properties": {
+					"banner": {
+						"type": "string",
+						"example": "https://firebasestorage.googleapis.com/b/bucket/o/20210912.jpg"
+					},
+					"logo": {
+						"type": "string",
+						"example": "https://firebasestorage.googleapis.com/b/bucket/o/20210912.jpg"
+					},
+					"uri": {
+						"type": "string",
+						"description": "L'URI de l'organisation",
+						"example": "grand-defi",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"name": {
+						"type": "string",
+						"description": "Le nom de l'organisation",
+						"example": "Grand Défi",
+						"minLength": 5,
+						"maxLength": 50
+					},
+					"members": {
+						"items": {
+							"properties": {
+								"permissions": {
+									"items": {
+										"type": "string"
+									},
+									"type": "array"
+								},
+								"name": {
+									"type": "string"
+								},
+								"userId": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"permissions",
+								"name",
+								"userId"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					},
+					"membersIds": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"photoCount": {
+						"type": "number",
+						"format": "double"
+					},
+					"updatedDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"createdDate": {
+						"type": "string",
+						"format": "date-time"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"banner",
+					"logo",
+					"uri",
+					"name",
+					"members",
+					"membersIds",
+					"photoCount",
+					"updatedDate",
+					"createdDate",
+					"id"
+				],
+				"type": "object"
+			},
+			"Pick_Organization.name-or-uri-or-logo-or-banner_": {
+				"properties": {
+					"name": {
+						"type": "string",
+						"description": "Le nom de l'organisation",
+						"example": "Grand Défi",
+						"minLength": 5,
+						"maxLength": 50
+					},
+					"uri": {
+						"type": "string",
+						"description": "L'URI de l'organisation",
+						"example": "grand-defi",
+						"minLength": 3,
+						"maxLength": 50
+					},
+					"logo": {
+						"type": "string",
+						"example": "https://firebasestorage.googleapis.com/b/bucket/o/20210912.jpg"
+					},
+					"banner": {
+						"type": "string",
+						"example": "https://firebasestorage.googleapis.com/b/bucket/o/20210912.jpg"
+					}
+				},
+				"required": [
+					"name",
+					"uri",
+					"logo",
+					"banner"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"CreateOrganizationDto": {
+				"$ref": "#/components/schemas/Pick_Organization.name-or-uri-or-logo-or-banner_"
+			},
+			"UpdateOrganizationDto": {
+				"properties": {
+					"banner": {
+						"type": "string"
+					},
+					"logo": {
+						"type": "string"
+					},
+					"uri": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"banner",
+					"logo",
+					"uri",
+					"name",
+					"id"
+				],
+				"type": "object"
+			},
+			"Pick_Photo.Exclude_keyofPhoto.sourceImageUrl__": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					},
+					"organizationId": {
+						"type": "string"
+					},
+					"eventId": {
+						"type": "string"
+					},
+					"albumId": {
+						"type": "string"
+					},
+					"bibNumbers": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array",
+						"description": "Une liste des BIBs associés à la photo",
+						"example": [
+							"83",
+							"57",
+							"12"
+						]
+					},
+					"haveBibsBeenChecked": {
+						"type": "boolean",
+						"description": "Valeur booléenne indiquant si les numéros de bibs ont été extraits de la photo"
+					},
+					"analysisDate": {
+						"type": "string",
+						"format": "date-time",
+						"description": "Date à laquelle la photo a été analysée"
+					},
+					"previewImageUrl": {
+						"type": "string",
+						"description": "L'URL de téléchargement de la photo telle qu'affichée sur le site",
+						"example": "https://www.runapp.com/organizations/bd721f18/events/d03605e6/albums/dbecd248/e50baa5c/preview.jpg"
+					},
+					"price": {
+						"type": "number",
+						"enum": [
+							"0"
+						],
+						"nullable": false
+					},
+					"width": {
+						"type": "number",
+						"format": "double"
+					},
+					"height": {
+						"type": "number",
+						"format": "double"
+					},
+					"portrait": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"name",
+					"id",
+					"organizationId",
+					"eventId",
+					"albumId",
+					"bibNumbers",
+					"haveBibsBeenChecked",
+					"previewImageUrl",
+					"price",
+					"width",
+					"height",
+					"portrait"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"Omit_Photo.sourceImageUrl_": {
+				"$ref": "#/components/schemas/Pick_Photo.Exclude_keyofPhoto.sourceImageUrl__",
+				"description": "Construct a type with the properties of T except for those in type K."
+			},
+			"WebPhoto": {
+				"$ref": "#/components/schemas/Omit_Photo.sourceImageUrl_",
+				"description": "Le type de photo qui sera retourné à l'interface web"
+			},
+			"Photo": {
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"portrait": {
+						"type": "boolean"
+					},
+					"height": {
+						"type": "number",
+						"format": "double"
+					},
+					"width": {
+						"type": "number",
+						"format": "double"
+					},
+					"price": {
+						"type": "number",
+						"enum": [
+							"0"
+						],
+						"nullable": false
+					},
+					"previewImageUrl": {
+						"type": "string",
+						"description": "L'URL de téléchargement de la photo telle qu'affichée sur le site",
+						"example": "https://www.runapp.com/organizations/bd721f18/events/d03605e6/albums/dbecd248/e50baa5c/preview.jpg"
+					},
+					"sourceImageUrl": {
+						"type": "string",
+						"description": "L'URL de téléchargement de la photo originale",
+						"example": "https://www.runapp.com/organizations/bd721f18/events/d03605e6/albums/dbecd248/e50baa5c/original.jpg"
+					},
+					"analysisDate": {
+						"type": "string",
+						"format": "date-time",
+						"description": "Date à laquelle la photo a été analysée"
+					},
+					"haveBibsBeenChecked": {
+						"type": "boolean",
+						"description": "Valeur booléenne indiquant si les numéros de bibs ont été extraits de la photo"
+					},
+					"bibNumbers": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array",
+						"description": "Une liste des BIBs associés à la photo",
+						"example": [
+							"83",
+							"57",
+							"12"
+						]
+					},
+					"albumId": {
+						"type": "string"
+					},
+					"eventId": {
+						"type": "string"
+					},
+					"organizationId": {
+						"type": "string"
+					},
+					"id": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"name",
+					"portrait",
+					"height",
+					"width",
+					"price",
+					"previewImageUrl",
+					"sourceImageUrl",
+					"haveBibsBeenChecked",
+					"bibNumbers",
+					"albumId",
+					"eventId",
+					"organizationId",
+					"id"
+				],
+				"type": "object"
+			}
+		},
+		"securitySchemes": {
+			"firebase": {
+				"type": "http",
+				"scheme": "bearer"
+			}
+		}
+	},
+	"info": {
+		"title": "runappapi",
+		"version": 1,
+		"description": "The API that powers the RunApp platform",
+		"contact": {}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/albums": {
+			"post": {
+				"operationId": "createAlbum",
+				"responses": {
+					"200": {
+						"description": "The newly created album",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Album"
+								}
+							}
+						}
+					}
+				},
+				"description": "Creates a new album for the given event in the given organization",
+				"tags": [
+					"Albums"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [
+					{
+						"description": "The organization URI",
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The event URI",
+						"in": "query",
+						"name": "eventUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"description": "The album to create",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateAlbumDto"
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"operationId": "modifyAlbum",
+				"responses": {
+					"200": {
+						"description": "The newly updated album",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Album"
+								}
+							}
+						}
+					}
+				},
+				"description": "Modifies an album for the given event in the given organization",
+				"tags": [
+					"Albums"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [
+					{
+						"description": "The organization URI",
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The event URI",
+						"in": "query",
+						"name": "eventUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The event URI",
+						"in": "query",
+						"name": "albumUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateAlbumDto"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "findEventAlbums",
+				"responses": {
+					"200": {
+						"description": "The albums for the given event in the given organization",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/Album"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves all albums for the given event in the given organization",
+				"tags": [
+					"Albums"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "The organization URI",
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The event URI",
+						"in": "query",
+						"name": "eventUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/albums/{albumUri}": {
+			"get": {
+				"operationId": "findAlbumByUri",
+				"responses": {
+					"200": {
+						"description": "The requested album",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Album"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves the album for the given organization, event, and album URI",
+				"tags": [
+					"Albums"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "The organization URI",
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The event URI",
+						"in": "query",
+						"name": "eventUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The album URI",
+						"in": "path",
+						"name": "albumUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/events": {
+			"post": {
+				"operationId": "createEvent",
+				"responses": {
+					"200": {
+						"description": "The newly created event",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/RacingEvent"
+								}
+							}
+						}
+					}
+				},
+				"description": "Creates a new event for the given organization",
+				"tags": [
+					"Events"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [
+					{
+						"description": "The organization URI",
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"description": "The event to create",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateEventDto"
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"operationId": "updateEvent",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/RacingEvent"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Events"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateEventDto"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "findOrganizationsEvents",
+				"responses": {
+					"200": {
+						"description": "The events for the given organization",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/RacingEvent"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves all events for the given organization",
+				"tags": [
+					"Events"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "The organization uri",
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/events/{eventUri}": {
+			"get": {
+				"operationId": "findEventByUri",
+				"responses": {
+					"200": {
+						"description": "The requested event",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/RacingEvent"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves the event for the given organization and event uri",
+				"tags": [
+					"Events"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "The organization uri",
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The event uri",
+						"in": "path",
+						"name": "eventUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/organizations": {
+			"post": {
+				"operationId": "createOrganization",
+				"responses": {
+					"200": {
+						"description": "The newly created organization",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Organization"
+								}
+							}
+						}
+					}
+				},
+				"description": "Creates a new organization with the passed information",
+				"tags": [
+					"Organizations"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"description": "The new organization data",
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateOrganizationDto"
+							}
+						}
+					}
+				}
+			},
+			"put": {
+				"operationId": "updateOrganization",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Organization"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"Organizations"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "query",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateOrganizationDto"
+							}
+						}
+					}
+				}
+			},
+			"get": {
+				"operationId": "findUserOrganizations",
+				"responses": {
+					"200": {
+						"description": "The organizations of the specified user",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/Organization"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves the organizations of a specific user",
+				"tags": [
+					"Organizations"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [
+					{
+						"description": "The user id for which you want to retrieve the organizations",
+						"in": "query",
+						"name": "userId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/organizations/{orgUri}": {
+			"get": {
+				"operationId": "findOrganizationByUri",
+				"responses": {
+					"200": {
+						"description": "The organization with the specified uri",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Organization"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves the organization with the specified uri",
+				"tags": [
+					"Organizations"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "The uri of the desired organization",
+						"in": "path",
+						"name": "orgUri",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/photos": {
+			"get": {
+				"operationId": "findEventPhotos",
+				"responses": {
+					"200": {
+						"description": "The requested photos",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/WebPhoto"
+									},
+									"type": "array"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves the photos for a given event, optionally filtered by albums and bib number",
+				"tags": [
+					"Photos"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "The event id",
+						"in": "query",
+						"name": "eventId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "albumsIdsString",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "query",
+						"name": "lastPagePhotoId",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"description": "The bib number",
+						"in": "query",
+						"name": "bibNumber",
+						"required": false,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/photos/{photoId}": {
+			"get": {
+				"operationId": "findPhoto",
+				"responses": {
+					"200": {
+						"description": "The requested photo",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/Photo"
+								}
+							}
+						}
+					}
+				},
+				"description": "Retrieves the photo for the given id",
+				"tags": [
+					"Photos"
+				],
+				"security": [],
+				"parameters": [
+					{
+						"description": "The id of the photo",
+						"in": "path",
+						"name": "photoId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"delete": {
+				"operationId": "deletePhoto",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "boolean"
+								}
+							}
+						}
+					}
+				},
+				"description": "Deletes the photo for the given id",
+				"tags": [
+					"Photos"
+				],
+				"security": [
+					{
+						"firebase": []
+					}
+				],
+				"parameters": [
+					{
+						"description": "The id of the photo",
+						"in": "path",
+						"name": "photoId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/firebaseprojectid/us-central1/api"
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "organizations/kGWkZ4DvVBFIPwwSEOmG/events/EqTtiqE7GfxTz0NIzDrn/albums/kCUCJDotjS4AXA7QTRNa/finish4.jpg",
+  "bucket": "firebasestoragebucket",
+  "contentType": "image/jpeg",
+  "metageneration": 1,
+  "generation": 1644019824132,
+  "storageClass": "STANDARD",
+  "etag": "someETag",
+  "contentDisposition": "inline",
+  "contentEncoding": "identity",
+  "downloadTokens": [
+    "a43eeecd-d5b5-4bc4-8916-e8f7cd7cd06d"
+  ],
+  "timeCreated": "2022-02-05T00:10:24.131Z",
+  "updated": "2022-02-05T00:10:24.134Z",
+  "size": 224396,
+  "md5Hash": "Eb7GB+Giod1vvrpVpEB70Q==",
+  "crc32c": "2813122208"
+}

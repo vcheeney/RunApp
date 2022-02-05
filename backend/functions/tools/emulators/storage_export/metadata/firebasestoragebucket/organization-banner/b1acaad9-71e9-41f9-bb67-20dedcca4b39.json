@@ -1,0 +1,19 @@
+{
+  "name": "organization-banner/b1acaad9-71e9-41f9-bb67-20dedcca4b39",
+  "bucket": "firebasestoragebucket",
+  "contentType": "image/png",
+  "metageneration": 1,
+  "generation": 1644011536703,
+  "storageClass": "STANDARD",
+  "etag": "someETag",
+  "contentDisposition": "inline",
+  "contentEncoding": "identity",
+  "downloadTokens": [
+    "ea2d8166-4270-4b08-9d3d-94fabbf84761"
+  ],
+  "timeCreated": "2022-02-04T21:52:16.702Z",
+  "updated": "2022-02-04T21:52:16.710Z",
+  "size": 1005873,
+  "md5Hash": "TZrlfpq3mOiUt+guyvlq1w==",
+  "crc32c": "2646877985"
+}

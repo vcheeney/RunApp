@@ -1,0 +1,19 @@
+{
+  "name": "event-logo/37943c11-aff7-49e3-84e4-8b2e45dd441c",
+  "bucket": "firebasestoragebucket",
+  "contentType": "image/png",
+  "metageneration": 1,
+  "generation": 1644011133354,
+  "storageClass": "STANDARD",
+  "etag": "someETag",
+  "contentDisposition": "inline",
+  "contentEncoding": "identity",
+  "downloadTokens": [
+    "5e24ca07-0869-4d0a-84cd-d7c0522bb0b9"
+  ],
+  "timeCreated": "2022-02-04T21:45:33.353Z",
+  "updated": "2022-02-04T21:45:33.364Z",
+  "size": 1665838,
+  "md5Hash": "2PALaj/FBXOs8WyFDFjBCw==",
+  "crc32c": "4044847808"
+}

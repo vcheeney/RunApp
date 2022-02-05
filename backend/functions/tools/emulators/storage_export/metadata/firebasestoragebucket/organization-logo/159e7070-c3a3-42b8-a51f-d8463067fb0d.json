@@ -1,0 +1,19 @@
+{
+  "name": "organization-logo/159e7070-c3a3-42b8-a51f-d8463067fb0d",
+  "bucket": "firebasestoragebucket",
+  "contentType": "image/png",
+  "metageneration": 1,
+  "generation": 1644011167863,
+  "storageClass": "STANDARD",
+  "etag": "someETag",
+  "contentDisposition": "inline",
+  "contentEncoding": "identity",
+  "downloadTokens": [
+    "ddc759ae-a862-4f64-9679-a3646ddc2aa9"
+  ],
+  "timeCreated": "2022-02-04T21:46:07.862Z",
+  "updated": "2022-02-04T21:46:07.864Z",
+  "size": 9318,
+  "md5Hash": "byGB2RBAamWHP2Ps9/DceQ==",
+  "crc32c": "2579554998"
+}

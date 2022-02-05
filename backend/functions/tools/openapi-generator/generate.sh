@@ -1,0 +1,1 @@
+openapi-generator-cli generate -i swagger.json --generator-name typescript-axios -o /local/out --additional-properties=useSingleRequestParameter=true

@@ -1,0 +1,21 @@
+{
+	"entryFile": "src/index.ts",
+	"noImplicitAdditionalProperties": "throw-on-extras",
+	"controllerPathGlobs": ["src/**/*Controller.ts"],
+	"spec": {
+		"basePath": "firebaseprojectid/us-central1/api",
+		"outputDirectory": "tools/openapi-generator",
+		"specVersion": 3,
+		"version": 1,
+		"securityDefinitions": {
+			"firebase": {
+				"type": "http",
+				"scheme": "bearer"
+			}
+		}
+	},
+	"routes": {
+		"routesDir": "src",
+		"authenticationModule": "src/middleware/authentication.ts"
+	}
+}

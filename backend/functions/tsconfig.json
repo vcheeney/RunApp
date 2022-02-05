@@ -1,0 +1,42 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"outDir": "build",
+		"sourceMap": true,
+		"target": "es2017",
+		"types": ["jest"],
+		"typeRoots": ["./types", "./node_modules/@types"],
+
+		/* Strict Type-Checking Options */
+		"strict": true,
+		"noImplicitAny": false,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictBindCallApply": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+
+		/* Additional Checks */
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+
+		/* Module Resolution Options */
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+
+		/* Experimental Options */
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+
+		/* Advanced Options */
+		"forceConsistentCasingInFileNames": true,
+
+		/* Json */
+		"resolveJsonModule": true
+	},
+	"compileOnSave": true,
+	"include": ["src"]
+}
